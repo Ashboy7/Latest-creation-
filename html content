@@ -44,3 +44,86 @@
   </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top 5 Greatest AI Apps in 2025</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>The 5 Greatest AI Apps Taking Over the World in 2025</h1>
+    <p>"In 2025, artificial intelligence is no longer just a tool — it's a daily companion, a co-worker, and in some ways, a second brain."</p>
+  </header>
+
+  <main>
+    <section class="ai-app">
+      <h2>1. ChatGPT by OpenAI</h2>
+      <p><strong>Still the king of conversations — smarter, faster, and more helpful than ever.</strong></p>
+      <p>Since its first release in 2022, ChatGPT has evolved into the most widely used AI assistant in the world. In 2025, powered by GPT-4.5 and o4, it’s not just for casual chatting anymore. Students use it for learning, developers use it to write and debug code, and professionals use it to draft emails, reports, presentations, and more.</p>
+      <ul>
+        <li>Writing essays, blog posts, emails, and scripts</li>
+        <li>Solving math problems and explaining complex topics</li>
+        <li>Coding help (with real-time debugging and code completion)</li>
+        <li>Brainstorming ideas, planning trips, or even meal planning</li>
+      </ul>
+      <p><strong>What’s new in 2025:</strong> Memory, voice/image input, and the GPT Store for custom bots.</p>
+    </section>
+
+    <section class="ai-app">
+      <h2>2. Claude 3 by Anthropic</h2>
+      <p><strong>The most polite and thoughtful AI ever built.</strong></p>
+      <p>Claude 3 has become a favorite in the corporate and education sectors because of its calm, helpful tone and deep understanding. It's especially good at summarizing, analyzing documents, and staying safe from misinformation or inappropriate content.</p>
+      <ul>
+        <li>Reading and summarizing PDFs and research papers</li>
+        <li>Customer service replies</li>
+        <li>Support for healthcare and education with safe, calm answers</li>
+      </ul>
+      <p><strong>Why people love it:</strong> Feels like you're talking to a kind teacher or advisor.</p>
+    </section>
+
+    <section class="ai-app">
+      <h2>3. Google Gemini</h2>
+      <p><strong>Deeply connected with your everyday tools.</strong></p>
+      <p>Gemini is Google’s flagship AI that is now built into Docs, Gmail, Search, and Android. It helps users write faster, research better, and understand context across Google’s suite.</p>
+      <ul>
+        <li>Smart suggestions in Gmail and Docs</li>
+        <li>Contextual search results with AI summaries</li>
+        <li>Image generation, math solving, and more</li>
+      </ul>
+      <p><strong>Standout Feature:</strong> Seamless integration across all your devices.</p>
+    </section>
+
+    <section class="ai-app">
+      <h2>4. Perplexity AI</h2>
+      <p><strong>The AI-powered search engine that cites its sources.</strong></p>
+      <p>Perplexity AI combines the power of search with conversational answers. You ask a question — it answers like ChatGPT, but backs it up with real sources, links, and citations.</p>
+      <ul>
+        <li>Quick answers with source links</li>
+        <li>Factual and transparent search experience</li>
+        <li>Used by students, researchers, and journalists</li>
+      </ul>
+      <p><strong>Why it’s rising fast:</strong> It’s like Google with a brain that talks back.</p>
+    </section>
+
+    <section class="ai-app">
+      <h2>5. Midjourney & Sora</h2>
+      <p><strong>The creative AIs of 2025 — one for images, one for video.</strong></p>
+      <p><strong>Midjourney</strong> continues to be the top tool for stunning AI art and illustrations. From fantasy landscapes to hyperreal portraits, creatives use it to imagine the impossible.</p>
+      <p><strong>Sora by OpenAI</strong> is a newer entry but already dominating video generation — turning text into realistic short films in seconds.</p>
+      <ul>
+        <li>Midjourney: Incredible AI-generated art from text prompts</li>
+        <li>Sora: Realistic video generation, including motion and sound</li>
+        <li>Used in filmmaking, marketing, content creation</li>
+      </ul>
+      <p><strong>Why they're essential:</strong> Visual storytelling is easier than ever with these tools.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Future AI Insights | Made with ❤️</p>
+  </footer>
+</body>
+</html>
