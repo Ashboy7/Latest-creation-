@@ -3,16 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login Page</title>
+  <title>Login Form</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="login-container">
-    <h2>Login</h2>
     <form class="login-form">
-      <input type="text" placeholder="Username" required />
-      <input type="password" placeholder="Password" required />
+      <h2>Login</h2>
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username" required />
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+      </div>
       <button type="submit">Login</button>
+      <p class="signup-text">Don't have an account? <a href="#">Sign Up</a></p>
     </form>
   </div>
 </body>
