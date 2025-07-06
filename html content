@@ -3,80 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Infinity Castle Trailer Breakdown</title>
+  <title>Top 5 AI Tools in 2025</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Infinity Castle Trailer Breakdown – What’s Coming in Demon Slayer</h1>
-    <p>Everything you need to know about the upcoming climax of the Demon Slayer anime</p>
+    <h1>Top 5 AI Tools to Use in 2025</h1>
+    <p>Explore the most powerful AI tools reshaping the future.</p>
   </header>
 
-  <main>
-    <article>
-      <section class="intro">
-        <h2>The Wait Is Over</h2>
-        <p>After months of speculation, the official trailer for the *Infinity Castle Arc* has finally dropped, and fans are losing their minds. The trailer delivers stunning visuals, haunting music, and a glimpse at some of the most intense battles we’ll see in the entire *Demon Slayer* series.</p>
-        <p>In this article, we’ll break down every moment, explain what it means for the story, and explore what to expect from the final battle between the Hashira and Muzan Kibutsuji’s inner circle.</p>
-      </section>
+  <main class="cards-container">
+    <div class="card">
+      <h2>1. ChatGPT (OpenAI)</h2>
+      <p>Best for conversation, coding help, writing, and brainstorming ideas. Powered by GPT-4.5/o4.</p>
+    </div>
+    
+    <div class="card">
+      <h2>2. Claude 3 (Anthropic)</h2>
+      <p>A helpful assistant with long memory and great context understanding. Popular in enterprise environments.</p>
+    </div>
 
-      <section>
-        <h2>What Is the Infinity Castle?</h2>
-        <p>The Infinity Castle is Muzan’s dimension — a shifting, eerie fortress created and controlled by Nakime, the Biwa-playing demon. It’s a vast and chaotic labyrinth where time and space distort, making it the perfect battleground for the most dangerous demons and Demon Slayers alike.</p>
-        <p>The trailer opens with an ominous view of the castle: moving walls, infinite staircases, and ghostly lights. This setting symbolizes the endgame. The stakes are higher than ever.</p>
-      </section>
+    <div class="card">
+      <h2>3. Google Gemini</h2>
+      <p>Google's AI suite with deep integration into Docs, Sheets, and Search. Excellent for productivity tasks.</p>
+    </div>
 
-      <section>
-        <h2>Who Appears in the Trailer?</h2>
-        <ul>
-          <li><strong>Tanjiro Kamado:</strong> Determined and scarred from previous battles, we see him entering the castle ready to confront Muzan directly.</li>
-          <li><strong>Nezuko Kamado:</strong> Still partially demon, Nezuko’s fate remains a central mystery — will she regain full humanity or play a crucial role in battle?</li>
-          <li><strong>Hashira Squad:</strong> Giyu, Sanemi, Mitsuri, Obanai, Gyomei, and more all appear preparing for battle. Their presence confirms this arc will focus heavily on their final moments.</li>
-          <li><strong>Upper Moons:</strong> Kokushibo, Akaza, Doma, and Nakime are shown — each poised for their final confrontations.</li>
-        </ul>
-      </section>
+    <div class="card">
+      <h2>4. Perplexity AI</h2>
+      <p>An AI-powered search engine that gives direct, cited answers — perfect for quick and reliable research.</p>
+    </div>
 
-      <section>
-        <h2>Major Battles Teased</h2>
-        <p>The trailer teases multiple fight scenes, including:</p>
-        <ul>
-          <li><strong>Sanemi & Gyomei vs Kokushibo</strong> – A fast-paced clash with the Upper Rank One demon, featuring moon breathing and raw brute force.</li>
-          <li><strong>Mitsuri & Obanai vs Nakime</strong> – A spatial battle inside the shifting castle halls.</li>
-          <li><strong>Tanjiro & Giyu vs Akaza</strong> – A rematch with personal stakes and emotional flashbacks.</li>
-        </ul>
-        <p>Each fight is animated with extraordinary quality — breathing techniques and blood demon arts sparkle with detail.</p>
-      </section>
-
-      <section>
-        <h2>The Final Showdown with Muzan</h2>
-        <p>One of the most chilling scenes in the trailer shows Muzan's eyes glowing red as he declares, “All demons exist to serve me.” He’s shown briefly facing Tanjiro, and fans are speculating this will lead into the climactic sunrise battle — the most emotional and devastating part of the series.</p>
-      </section>
-
-      <section>
-        <h2>Animation Quality</h2>
-        <p>Studio Ufotable has outdone itself again. From the lighting in the Infinity Castle to the fluidity of sword techniques, everything looks polished. The trailer showcases detailed facial expressions, weather effects, and cinematic camera angles, raising expectations sky-high.</p>
-      </section>
-
-      <section>
-        <h2>Release Date & Episode Format</h2>
-        <p>According to the end card of the trailer, the Infinity Castle arc will begin airing in **Fall 2025**, likely as a multi-part season or even split films. Fans expect 3 major arcs: Infinity Castle, Final Battle, and Epilogue.</p>
-      </section>
-
-      <section>
-        <h2>What Fans Are Saying</h2>
-        <p>Twitter, Reddit, and YouTube exploded within minutes of the trailer dropping. Hashtags like #InfinityCastle and #DemonSlayerFinalArc trended worldwide. Most fans agree: this will be the most emotional arc yet, with multiple beloved characters facing their end.</p>
-      </section>
-
-      <section>
-        <h2>Conclusion</h2>
-        <p>The Infinity Castle trailer isn’t just a teaser — it’s a warning. A signal that *Demon Slayer* is ready to break hearts, blow minds, and leave its legacy as one of the greatest anime stories ever told.</p>
-        <p>So get your tissues, your theories, and your breathing techniques ready — 2025 is going to be unforgettable.</p>
-      </section>
-    </article>
+    <div class="card">
+      <h2>5. Midjourney / Sora</h2>
+      <p>Midjourney for images, and Sora by OpenAI for videos — the top visual AI tools in 2025.</p>
+    </div>
   </main>
 
   <footer>
-    <p>© 2025 Infinity Castle Watch | Made for Demon Slayer Fans</p>
+    <p>© 2025 Future AI Insights</p>
   </footer>
 </body>
 </html>
