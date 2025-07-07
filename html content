@@ -3,60 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Free Music Player</title>
+  <title>Top 5 AI Tools in 2025</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <h1>Top 5 AI Tools to Use in 2025</h1>
+    <p>Explore the most powerful AI tools reshaping the future.</p>
+  </header>
 
-  <!-- Login Form -->
-  <div class="login-container" id="login-container">
-    <h2>Login to Listen 🎧</h2>
-    <input type="text" id="username" placeholder="Username" required />
-    <input type="password" id="password" placeholder="Password" required />
-    <button onclick="login()">Login</button>
-    <p id="error-msg"></p>
-  </div>
+  <main class="cards-container">
+    <div class="card">
+      <h2>1. ChatGPT (OpenAI)</h2>
+      <p>Best for conversation, coding help, writing, and brainstorming ideas. Powered by GPT-4.5/o4.</p>
+    </div>
+    
+    <div class="card">
+      <h2>2. Claude 3 (Anthropic)</h2>
+      <p>A helpful assistant with long memory and great context understanding. Popular in enterprise environments.</p>
+    </div>
 
-  <!-- Main Music Content -->
-  <div class="main-content" id="main-content" style="display: none;">
-    <header>
-      <h1>🎵 Free Music Zone</h1>
-      <p>Logged in successfully — Enjoy the beats!</p>
-    </header>
+    <div class="card">
+      <h2>3. Google Gemini</h2>
+      <p>Google's AI suite with deep integration into Docs, Sheets, and Search. Excellent for productivity tasks.</p>
+    </div>
 
-    <section class="music-player">
-      <h2>Now Playing</h2>
+    <div class="card">
+      <h2>4. Perplexity AI</h2>
+      <p>An AI-powered search engine that gives direct, cited answers — perfect for quick and reliable research.</p>
+    </div>
 
-      <div class="track">
-        <h3>1. Lofi Chill Vibes</h3>
-        <audio controls>
-          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
-          Your browser does not support the audio element.
-        </audio>
-      </div>
+    <div class="card">
+      <h2>5. Midjourney / Sora</h2>
+      <p>Midjourney for images, and Sora by OpenAI for videos — the top visual AI tools in 2025.</p>
+    </div>
+  </main>
 
-      <div class="track">
-        <h3>2. Smooth Jazz</h3>
-        <audio controls>
-          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mp3">
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-
-      <div class="track">
-        <h3>3. Epic Cinematic Beat</h3>
-        <audio controls>
-          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mp3">
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-    </section>
-
-    <footer>
-      <p>© 2025 MusicZone | For Demo Use Only</p>
-    </footer>
-  </div>
-
-  <script src="script.js"></script>
+  <footer>
+    <p>© 2025 Future AI Insights</p>
+  </footer>
 </body>
 </html>
