@@ -2,66 +2,52 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  background-color: #f4f6f8;
+  height: 100vh;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 24px;
   color: #333;
 }
 
-header {
-  background-color: #1e3a8a;
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4a90e2;
   color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 18px;
-}
-
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h2 {
-  font-size: 20px;
-  color: #1e3a8a;
-  margin-bottom: 10px;
-}
-
-.card p {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
   font-size: 16px;
-  line-height: 1.5;
+  transition: background 0.3s ease;
 }
 
-footer {
-  background-color: #1e3a8a;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
+.login-form button:hover {
+  background-color: #357abd;
+  }
