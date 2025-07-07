@@ -1,15 +1,15 @@
 function login() {
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value.trim();
   const errorMsg = document.getElementById('error-msg');
 
-  const correctUsername = "animefan";
-  const correctPassword = "2025";
+  const validUsername = "musicfan";
+  const validPassword = "12345";
 
-  if (username === correctUsername && password === correctPassword) {
-    document.getElementById('login-container').style.display = 'none';
-    document.getElementById('main-content').style.display = 'block';
+  if (username === validUsername && password === validPassword) {
+    document.getElementById('login-container').style.display = "none";
+    document.getElementById('main-content').style.display = "block";
   } else {
-    errorMsg.textContent = "Incorrect username or password!";
+    errorMsg.textContent = "Incorrect username or password.";
   }
 }
