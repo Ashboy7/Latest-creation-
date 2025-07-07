@@ -1,29 +1,37 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Top 7 AI Search Engines 2025</title>
+  <title>GlobeTune</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- Login Page -->
-  <div id="login-page" class="login-container">
-    <h2>Login to Explore AI Search Engines</h2>
-    <input type="text" id="username" placeholder="Username" required />
-    <input type="password" id="password" placeholder="Password" required />
-    <button onclick="login()">Login</button>
-    <p id="login-error"></p>
-  </div>  <!-- Main Content -->  <div id="main-content" style="display: none;">
-    <header>
-      <h1>🔍 Top 7 AI Search Engines to Use in 2025</h1>
-      <p>Discover the smartest ways to find anything online</p>
-    </header><main>
-  <section class="intro">
-    <p>AI has redefined search. No more blue links. These smart tools give answers, context, and interaction. Here's the best in 2025.</p>
-  </section>
+  <header>
+    <h1>🎵 GlobeTune</h1>
+    <nav>
+      <a href="login.html">Login</a>
+      <input type="text" placeholder="Search music..." id="searchBox" />
+    </nav>
+  </header>
 
-  <div class="filter-bar">
-    <input type="text" id="searchInput" placeholder="Search AI names
+  <main>
+    <h2>Explore Music by Continent</h2>
+    <div class="continent-buttons">
+      <button onclick="loadMusic('Africa')">Africa</button>
+      <button onclick="loadMusic('Asia')">Asia</button>
+      <button onclick="loadMusic('Europe')">Europe</button>
+      <button onclick="loadMusic('North America')">North America</button>
+      <button onclick="loadMusic('South America')">South America</button>
+      <button onclick="loadMusic('Oceania')">Oceania</button>
+      <button onclick="loadMusic('Antarctica')">Antarctica</button>
+    </div>
 
-      
+    <div id="music-list">
+      <!-- Songs appear here -->
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
