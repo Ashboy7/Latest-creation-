@@ -1,19 +1,27 @@
-// Fox AI: Full Stack App with OpenAI + Firebase
+function toggleTab(tabId) {
+  document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+}
 
-// 1. Initialize Firebase // File: firebase.js import { initializeApp } from "firebase/app"; import { getAuth } from "firebase/auth"; import { getFirestore } from "firebase/firestore";
+function sendChat() {
+  const input = document.getElementById("chatInput").value;
+  const chatBox = document.getElementById("chatBox");
+  chatBox.innerHTML += `<p><b>You:</b> ${input}</p>`;
+  chatBox.innerHTML += `<p><b>Fox AI:</b> ${mockResponse(input)}</p>`;
+  document.getElementById("chatInput").value = "";
+}
 
-const firebaseConfig = { apiKey: "YOUR_FIREBASE_API_KEY", authDomain: "YOUR_FIREBASE_PROJECT.firebaseapp.com", projectId: "YOUR_PROJECT_ID", storageBucket: "YOUR_BUCKET", messagingSenderId: "SENDER_ID", appId: "APP_ID" };
+function generateImage() {
+  const prompt = document.getElementById("imagePrompt").value;
+  document.getElementById("imageResult").innerHTML = `<p><b>Generated:</b> "${prompt}"</p><img src="https://via.placeholder.com/300?text=${encodeURIComponent(prompt)}"/>`;
+}
 
-const app = initializeApp(firebaseConfig); export const auth = getAuth(app); export const db = getFirestore(app);
+function generateText() {
+  const type = document.getElementById("textType").value;
+  const prompt = document.getElementById("textPrompt").value;
+  document.getElementById("textResult").innerHTML = `<p><b>${type}:</b> ${mockResponse(prompt)}</p>`;
+}
 
-// 2. Express Server (server.js) const express = require('express'); const cors = require('cors'); const { Configuration, OpenAIApi } = require('openai'); require('dotenv').config();
-
-const app = express(); app.use(cors()); app.use(express.json());
-
-const configuration = new Configuration({ apiKey: process.env.OPENAI_API_KEY, }); const openai = new OpenAIApi(configuration);
-
-app.post('/api/chat', async (req, res) => { const { prompt } = req.body; try { const response = await openai.createChatCompletion({ model: 'gpt-4', messages: [{ role: 'user', content: prompt }], }); res.json({ reply: response.data.choices[0].message.content }); } catch (error) { res.status(500).json({ error: error.message }); } });
-
-app.post('/api/image', async (req, res) => { const { prompt } = req.body; try { const response = await openai.createImage({ prompt, n: 1, size: "512x512", }); res.json({ imageUrl: response.data.data[0].url }); }
-
-         
+function mockResponse(prompt) {
+  return `This is a placeholder response for: "${prompt}". Real AI response goes here.`;
+}
