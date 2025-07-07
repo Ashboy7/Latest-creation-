@@ -1,61 +1,85 @@
 * {
   box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  background-color: #f4f4f4;
-  color: #222;
-  line-height: 1.7;
+  background: #f2f2f2;
+  color: #333;
+  min-height: 100vh;
 }
 
+/* Login Form */
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.login-container button {
+  padding: 12px;
+  width: 100%;
+  background-color: #ff4b2b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #e8431a;
+}
+
+#error-msg {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Main Content */
 header {
   background-color: #2d2d2d;
   color: white;
-  text-align: center;
   padding: 40px 20px;
+  text-align: center;
 }
 
-header h1 {
-  font-size: 32px;
+.anime-section {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.anime-section h2 {
   margin-bottom: 10px;
 }
 
-main {
-  max-width: 960px;
-  margin: 30px auto;
-  padding: 0 20px;
-}
-
-section {
-  margin-bottom: 40px;
-  background-color: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-ul {
+.anime-section ul {
   padding-left: 20px;
 }
 
-.battle-card {
-  margin-top: 20px;
-}
-
-.battle-card img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  margin: 10px 0;
-  border-radius: 10px;
-}
-
 footer {
-  background-color: #2d2d2d;
-  color: white;
   text-align: center;
   padding: 20px;
-}
+  background-color: #2d2d2d;
+  color: white;
+  margin-top: 40px;
+  }
