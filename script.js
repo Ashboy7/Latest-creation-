@@ -1,36 +1,19 @@
-const musicDatabase = {
-  Africa: [
-    { title: "Afrobeat Jam", url: "https://example.com/afrobeat.mp3" },
-    { title: "Zulu Rhythm", url: "https://example.com/zulu.mp3" }
-  ],
-  Europe: [
-    { title: "EDM Party", url: "https://example.com/edm.mp3" },
-  ],
-  Asia: [
-    { title: "K-Pop Hit", url: "https://example.com/kpop.mp3" },
-  ],
-  // Add other continents...
-};
+// Fox AI: Full Stack App with OpenAI + Firebase
 
-function loadMusic(continent) {
-  const list = document.getElementById("music-list");
-  list.innerHTML = `<h3>${continent} Music</h3>`;
-  musicDatabase[continent].forEach(song => {
-    list.innerHTML += `
-      <div class="music-card">
-        <h4>${song.title}</h4>
-        <audio controls src="${song.url}"></audio>
-        <div>
-          <button>❤️ Like</button>
-          <button>📌 Pin</button>
-          <button onclick="shareSong('${song.url}')">🔗 Share</button>
-        </div>
-      </div>
-    `;
-  });
-}
+// 1. Initialize Firebase // File: firebase.js import { initializeApp } from "firebase/app"; import { getAuth } from "firebase/auth"; import { getFirestore } from "firebase/firestore";
 
-function shareSong(url) {
-  navigator.clipboard.writeText(url);
-  alert("Link copied to clipboard!");
-  }
+const firebaseConfig = { apiKey: "YOUR_FIREBASE_API_KEY", authDomain: "YOUR_FIREBASE_PROJECT.firebaseapp.com", projectId: "YOUR_PROJECT_ID", storageBucket: "YOUR_BUCKET", messagingSenderId: "SENDER_ID", appId: "APP_ID" };
+
+const app = initializeApp(firebaseConfig); export const auth = getAuth(app); export const db = getFirestore(app);
+
+// 2. Express Server (server.js) const express = require('express'); const cors = require('cors'); const { Configuration, OpenAIApi } = require('openai'); require('dotenv').config();
+
+const app = express(); app.use(cors()); app.use(express.json());
+
+const configuration = new Configuration({ apiKey: process.env.OPENAI_API_KEY, }); const openai = new OpenAIApi(configuration);
+
+app.post('/api/chat', async (req, res) => { const { prompt } = req.body; try { const response = await openai.createChatCompletion({ model: 'gpt-4', messages: [{ role: 'user', content: prompt }], }); res.json({ reply: response.data.choices[0].message.content }); } catch (error) { res.status(500).json({ error: error.message }); } });
+
+app.post('/api/image', async (req, res) => { const { prompt } = req.body; try { const response = await openai.createImage({ prompt, n: 1, size: "512x512", }); res.json({ imageUrl: response.data.data[0].url }); }
+
+         
