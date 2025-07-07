@@ -3,9 +3,8 @@ function login() {
   const password = document.getElementById('password').value;
   const errorMsg = document.getElementById('error-msg');
 
-  // Change these credentials as needed
   const correctUsername = "animefan";
-  const correctPassword = "12345";
+  const correctPassword = "2025";
 
   if (username === correctUsername && password === correctPassword) {
     document.getElementById('login-container').style.display = 'none';
@@ -13,4 +12,4 @@ function login() {
   } else {
     errorMsg.textContent = "Incorrect username or password!";
   }
-      }
+}
