@@ -1,82 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Demon Slayer: Infinity Castle Arc (Season 5)</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Fans Portal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Demon Slayer: Infinity Castle Arc</h1>
-    <p>Season 5 | Full Breakdown, Battles & Characters</p>
-  </header>
+  <!-- Login Form -->
+  <div class="login-container" id="login-container">
+    <h2>Login to Anime World</h2>
+    <input type="text" id="username" placeholder="Username" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <button onclick="login()">Login</button>
+    <p id="error-msg"></p>
+  </div>
 
-  <main>
-    <section class="intro">
-      <h2>🔥 About Season 5</h2>
-      <p>The final battle begins inside Muzan's stronghold – the Infinity Castle. With reality-shifting architecture and deadly Upper Moons, the Demon Slayer Corps face their most intense and heartbreaking battles yet.</p>
-    </section>
+  <!-- Main Anime Website Content (hidden at first) -->
+  <div class="main-content" id="main-content" style="display:none;">
+    <header>
+      <h1>Welcome to Anime World 🌸</h1>
+      <p>The hub for all anime fans — explore, discuss, and connect!</p>
+    </header>
 
-    <section class="episode">
-      <h2>📜 Episode List & Plot</h2>
+    <section class="anime-section">
+      <h2>🔥 Trending Anime</h2>
       <ul>
-        <li><strong>Episode 1:</strong> Descent Into the Castle</li>
-        <li><strong>Episode 2:</strong> Hashira Split Paths</li>
-        <li><strong>Episode 3:</strong> Moonlight Blade: Kokushibo Appears</li>
-        <li><strong>Episode 4:</strong> Dance of Flame & Water</li>
-        <li><strong>Episode 5:</strong> Akaza’s Redemption</li>
-        <li><strong>Episode 6:</strong> Love Hashira’s Last Stand</li>
-        <li><strong>Episode 7:</strong> Soundless Strings: Nakime’s Maze</li>
-        <li><strong>Episode 8:</strong> Nezuko’s Light</li>
-        <li><strong>Episode 9:</strong> Final Confrontation: Muzan Unleashed</li>
-        <li><strong>Episode 10:</strong> Sunrise of Hope</li>
+        <li>Demon Slayer: Infinity Castle Arc</li>
+        <li>Jujutsu Kaisen Season 3</li>
+        <li>Attack on Titan: Final Ending</li>
+        <li>One Piece - Egghead Island Arc</li>
+        <li>Solo Leveling</li>
       </ul>
     </section>
 
-    <section class="battles">
-      <h2>⚔️ Key Battles</h2>
-
-      <div class="battle-card">
-        <h3>Sanemi & Gyomei vs Kokushibo</h3>
-        <img src="https://i.imgur.com/oJxv3pE.jpg" alt="Kokushibo Battle" />
-        <p>The Wind and Stone Hashira face the terrifying Upper Moon One. This battle features Moon Breathing vs brute force and perfect form. Gyomei’s transparent world ability shines here.</p>
-      </div>
-
-      <div class="battle-card">
-        <h3>Tanjiro & Giyu vs Akaza</h3>
-        <img src="https://i.imgur.com/Ff20CrN.jpg" alt="Akaza Battle" />
-        <p>One of the most emotional rematches. Giyu and Tanjiro must take down the Upper Moon Three. Akaza’s past is revealed as he battles with honor and regret.</p>
-      </div>
-
-      <div class="battle-card">
-        <h3>Mitsuri & Obanai vs Nakime</h3>
-        <img src="https://i.imgur.com/Q6k2Opi.jpg" alt="Nakime Battle" />
-        <p>Inside the shifting castle halls, Nakime manipulates the battlefield. The Love and Serpent Hashira battle against disorientation, sound manipulation, and fate itself.</p>
-      </div>
-
-      <div class="battle-card">
-        <h3>Zenitsu vs Kaigaku</h3>
-        <img src="https://i.imgur.com/8XvRySx.jpg" alt="Zenitsu vs Kaigaku" />
-        <p>Former classmates, now enemies. Zenitsu unleashes the Seventh Thunder Breathing form against Kaigaku, a fallen demon who mocks their master's teachings.</p>
-      </div>
-
-      <div class="battle-card">
-        <h3>Tanjiro vs Muzan Kibutsuji</h3>
-        <img src="https://i.imgur.com/TXzR9gM.jpg" alt="Tanjiro vs Muzan" />
-        <p>The final battle begins. Tanjiro, empowered by the legacy of Yoriichi, must hold off Muzan until sunrise. Allies fall, time stretches, and the fate of humanity hangs by a thread.</p>
-      </div>
+    <section class="anime-section">
+      <h2>🌟 Classics You Should Watch</h2>
+      <ul>
+        <li>Fullmetal Alchemist: Brotherhood</li>
+        <li>Naruto / Naruto Shippuden</li>
+        <li>Bleach</li>
+        <li>Death Note</li>
+        <li>Dragon Ball Z</li>
+      </ul>
     </section>
 
-    <section class="finale">
-      <h2>🌅 Finale & Epilogue</h2>
-      <p>The sun rises. Muzan meets his end in a blaze of light and sacrifice. Tanjiro nearly turns into a demon, but Nezuko's tears bring him back. The war ends. The corps disbands. Peace returns.</p>
-      <p>In a future world, we see descendants living normal lives, unaware of the bloodshed that brought them freedom.</p>
-    </section>
-  </main>
+    <footer>
+      <p>© 2025 Anime World | Fan-Made Portal</p>
+    </footer>
+  </div>
 
-  <footer>
-    <p>© 2025 Demon Slayer Fan Archive | Art belongs to Ufotable & Koyoharu Gotouge</p>
-  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
