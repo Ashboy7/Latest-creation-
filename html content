@@ -1,73 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anime World 2025</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Music Player</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Login Form -->
   <div class="login-container" id="login-container">
-    <h2>Login to Anime World</h2>
+    <h2>Login to Listen 🎧</h2>
     <input type="text" id="username" placeholder="Username" required />
     <input type="password" id="password" placeholder="Password" required />
     <button onclick="login()">Login</button>
     <p id="error-msg"></p>
   </div>
 
-  <!-- Main Content -->
+  <!-- Main Music Content -->
   <div class="main-content" id="main-content" style="display: none;">
     <header>
-      <h1>Anime World 2025 🌸</h1>
-      <p>Why anime continues to conquer the world</p>
+      <h1>🎵 Free Music Zone</h1>
+      <p>Logged in successfully — Enjoy the beats!</p>
     </header>
 
-    <main class="article">
-      <h2>Anime: A Global Obsession That Keeps Evolving</h2>
-      <p>From the streets of Tokyo to Times Square in New York, anime has become more than a hobby—it's a cultural movement. In 2025, anime continues to rise in influence, quality, and global reach, fueled by groundbreaking series, passionate communities, and immersive worlds that captivate hearts worldwide.</p>
+    <section class="music-player">
+      <h2>Now Playing</h2>
 
-      <h3>1. The Diversity of Genres Keeps Fans Hooked</h3>
-      <p>What makes anime truly unmatched is its sheer diversity. There’s a story for everyone. From the emotional depths of **Your Lie in April**, to the brutal battles of **Attack on Titan**, or the mind-bending sci-fi of **Steins;Gate**, anime stretches across every genre imaginable:</p>
-      <ul>
-        <li>🧙 Fantasy: *Demon Slayer*, *Black Clover*, *Fate/Zero*</li>
-        <li>⚔️ Action: *Jujutsu Kaisen*, *Chainsaw Man*, *Bleach: TYBW*</li>
-        <li>🎭 Drama/Romance: *Clannad*, *Horimiya*, *Fruits Basket*</li>
-        <li>🚀 Sci-fi: *Psycho-Pass*, *Ergo Proxy*, *86*</li>
-        <li>😄 Slice of Life: *March Comes in Like a Lion*, *Barakamon*</li>
-      </ul>
+      <div class="track">
+        <h3>1. Lofi Chill Vibes</h3>
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
 
-      <h3>2. Streaming and Simulcasting Changed Everything</h3>
-      <p>Thanks to services like **Crunchyroll**, **Netflix**, **Funimation**, and **Disney+**, anime is accessible globally within hours of release in Japan. Simulcasts ensure fans from Nairobi to New York can experience new episodes together. This has created a more connected, real-time fanbase.</p>
+      <div class="track">
+        <h3>2. Smooth Jazz</h3>
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
 
-      <h3>3. The Rise of AI-Enhanced Anime Production</h3>
-      <p>Studios are now using AI to enhance animation workflows. Backgrounds, frame in-betweens, and even voice pre-rendering have been optimized with tech. While traditional artists still lead creatively, AI is helping speed up timelines—allowing more seasonal content and higher quality visuals.</p>
-
-      <h3>4. Community: Cosplay, Conventions, and Content Creators</h3>
-      <p>In 2025, anime is as much about the fans as the shows. Cosplayers create film-level outfits. YouTubers break down episodes in real-time. TikTok trends are filled with anime edits, dances, and memes. Anime conventions now fill stadiums, not just hotel ballrooms.</p>
-
-      <h3>5. Top Anime Leading the Charge in 2025</h3>
-      <p>These are the most talked-about and beloved anime in the current year:</p>
-      <ul>
-        <li><strong>Demon Slayer: Infinity Castle Arc</strong> – Stunning animation and emotional battles</li>
-        <li><strong>Jujutsu Kaisen Season 3</strong> – The Culling Game begins with insane stakes</li>
-        <li><strong>Attack on Titan: The True Ending</strong> – Humanity’s darkest moment and final hope</li>
-        <li><strong>Solo Leveling</strong> – The Korean manhwa turned anime is dominating charts</li>
-        <li><strong>One Piece: Egghead Island</strong> – The beginning of the final saga</li>
-      </ul>
-
-      <h3>6. Anime’s Impact on Culture and Identity</h3>
-      <p>Anime is no longer "just cartoons." It shapes fashion, inspires music, and influences film. Artists like Billie Eilish, Bad Bunny, and BTS have spoken about anime’s effect on their art. And for fans, anime often provides identity, healing, and belonging.</p>
-
-      <h3>7. The Future: What's Next?</h3>
-      <p>With AI, AR/VR experiences, and new global studios emerging, anime in 2030 may look completely different—but the spirit will remain. Emotionally rich stories, unforgettable characters, and communities built on shared love and excitement.</p>
-
-      <p><em>Whether you’re a veteran otaku or someone new to the world of anime—welcome. There's always another story waiting to move you.</em></p>
-    </main>
+      <div class="track">
+        <h3>3. Epic Cinematic Beat</h3>
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </section>
 
     <footer>
-      <p>© 2025 Anime World | Built by Fans, for Fans.</p>
+      <p>© 2025 MusicZone | For Demo Use Only</p>
     </footer>
   </div>
 
