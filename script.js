@@ -1,27 +1,27 @@
-function toggleTab(tabId) {
-  document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-  document.getElementById(tabId).classList.add('active');
-}
+// Handle likes with localStorage
+document.querySelectorAll('.like-btn').forEach((btn, i) => {
+  const card = btn.closest('.anime-card');
+  const id = card.dataset.id;
 
-function sendChat() {
-  const input = document.getElementById("chatInput").value;
-  const chatBox = document.getElementById("chatBox");
-  chatBox.innerHTML += `<p><b>You:</b> ${input}</p>`;
-  chatBox.innerHTML += `<p><b>Fox AI:</b> ${mockResponse(input)}</p>`;
-  document.getElementById("chatInput").value = "";
-}
+  // Restore liked state
+  if (localStorage.getItem(`liked_${id}`)) {
+    btn.textContent = '❤️ Liked';
+    btn.style.background = '#28a745';
+  }
 
-function generateImage() {
-  const prompt = document.getElementById("imagePrompt").value;
-  document.getElementById("imageResult").innerHTML = `<p><b>Generated:</b> "${prompt}"</p><img src="https://via.placeholder.com/300?text=${encodeURIComponent(prompt)}"/>`;
-}
+  btn.addEventListener('click', () => {
+    localStorage.setItem(`liked_${id}`, 'true');
+    btn.textContent = '❤️ Liked';
+    btn.style.background = '#28a745';
+  });
+});
 
-function generateText() {
-  const type = document.getElementById("textType").value;
-  const prompt = document.getElementById("textPrompt").value;
-  document.getElementById("textResult").innerHTML = `<p><b>${type}:</b> ${mockResponse(prompt)}</p>`;
-}
-
-function mockResponse(prompt) {
-  return `This is a placeholder response for: "${prompt}". Real AI response goes here.`;
+// Share anime
+function shareAnime(name) {
+  const text = `Check out this anime: ${name} at AnimeVerse! (Offline link or share video)`;
+  if (navigator.share) {
+    navigator.share({ title: 'AnimeVerse', text });
+  } else {
+    alert("Sharing isn't supported on this device.\nYou can copy this text:\n\n" + text);
+  }
 }
