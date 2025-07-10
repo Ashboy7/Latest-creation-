@@ -1,68 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AnimeVerse - Watch Anime Anywhere</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnimeVerse - Global Anime Browser</title>
   <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <script type="module">
+    // Firebase SDKs
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+    import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
 
-  <header>
-    <h1>🌸 AnimeVerse</h1>
-    <p>Watch. Download. Like. Share. All offline.</p>
-  </header>
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const db = getFirestore();
 
-  <main class="anime-container">
+// Auth handlers
+const loginForm = document.getElementById('login-form');
+const logoutBtn = document.getElementById('logout');
+const userInfo = document.getElementById('user-info');
 
-    <div class="anime-card" data-id="naruto">
-      <img src="images/naruto.jpg" alt="Naruto">
-      <h2>Naruto</h2>
-      <video controls>
-        <source src="videos/naruto.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="actions">
-        <button class="like-btn">❤️ Like</button>
-        <a href="videos/naruto.mp4" download class="download-btn">⬇️ Download</a>
-        <button onclick="shareAnime('Naruto')">🔗 Share</button>
-      </div>
-    </div>
+loginForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const email = loginForm.email.value;
+  const password = loginForm.password.value;
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+  } catch (err) {
+    alert("Login failed. Trying to create account.");
+    await createUserWithEmailAndPassword(auth, email, password);
+  }
+});
 
-    <div class="anime-card" data-id="demon">
-      <img src="images/demon_slayer.jpg" alt="Demon Slayer">
-      <h2>Demon Slayer</h2>
-      <video controls>
-        <source src="videos/demon_slayer.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="actions">
-        <button class="like-btn">❤️ Like</button>
-        <a href="videos/demon_slayer.mp4" download class="download-btn">⬇️ Download</a>
-        <button onclick="shareAnime('Demon Slayer')">🔗 Share</button>
-      </div>
-    </div>
+logoutBtn.addEventListener('click', async () => {
+  await signOut(auth);
+});
 
-    <div class="anime-card" data-id="onepiece">
-      <img src="images/one_piece.jpg" alt="One Piece">
-      <h2>One Piece</h2>
-      <video controls>
-        <source src="videos/one_piece.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="actions">
-        <button class="like-btn">❤️ Like</button>
-        <a href="videos/one_piece.mp4" download class="download-btn">⬇️ Download</a>
-        <button onclick="shareAnime('One Piece')">🔗 Share</button>
-      </div>
-    </div>
+onAuthStateChanged(auth, async (user) => {
+  if (user) {
+    userInfo.innerText = `Logged in as: ${user.email}`;
+    document.body.classList.add("logged-in");
 
-  </main>
+    // Load favorites
+    const favDoc = await getDoc(doc(db, "favorites", user.uid));
+    if (favDoc.exists()) {
+      for (const id of favDoc.data().items) {
+        const btn = document.querySelector(`[data-id='${id}'] .like-btn`);
+        if (btn) {
+          btn.textContent = '❤️ Liked';
+          btn.style.background = '#28a745';
+        }
+      }
+    }
+  } else {
+    userInfo.innerText = "Not logged in";
+    document.body.classList.remove("logged-in");
+  }
+});
 
-  <footer>
-    &copy; 2025 AnimeVerse. Built for fans, by fans.
-  </footer>
+// Save favorite anime
+document.addEventListener('click', async (e) =>
 
-  <script src="script.js"></script>
-</body>
-</html>
+    
