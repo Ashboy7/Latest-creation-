@@ -3,203 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fox Dojo - Learn Martial Arts for Free</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #000;
-      color: #fff;
-    }
-
-    header {
-      background: #111;
-      padding: 20px 0;
-      text-align: center;
-      border-bottom: 2px solid red;
-    }
-
-    header h1 {
-      color: #ff3c3c;
-      font-size: 2.5em;
-      margin: 0;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      font-size: 1.1em;
-      color: #ccc;
-    }
-
-    .container {
-      padding: 30px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .video-section {
-      margin-bottom: 40px;
-      border: 1px solid #333;
-      padding: 20px;
-      border-radius: 10px;
-      background-color: #111;
-    }
-
-    .video-section h2 {
-      color: #ff3c3c;
-      margin-bottom: 15px;
-    }
-
-    video {
-      width: 100%;
-      border-radius: 10px;
-      border: 2px solid #444;
-    }
-
-    .download-btn {
-      margin-top: 15px;
-      display: inline-block;
-      background-color: #ff3c3c;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .download-btn:hover {
-      background-color: #e60000;
-    }
-
-    .badge-section {
-      text-align: center;
-      margin-top: 60px;
-      transition: all 0.5s ease;
-    }
-
-    .badge-section img {
-      width: 120px;
-      border-radius: 50%;
-      border: 4px solid #ff3c3c;
-      opacity: 0.4;
-      filter: grayscale(100%);
-      transition: all 0.5s ease;
-    }
-
-    .badge-earned img {
-      opacity: 1;
-      filter: none;
-      box-shadow: 0 0 20px #ff3c3c, 0 0 40px red;
-      transform: scale(1.1);
-    }
-
-    .badge-earned h3 {
-      color: #00ff88;
-      animation: glowText 2s infinite alternate;
-    }
-
-    @keyframes glowText {
-      from { text-shadow: 0 0 5px #00ff88; }
-      to   { text-shadow: 0 0 20px #00ff88; }
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      color: #777;
-      margin-top: 40px;
-      border-top: 2px solid red;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 15px;
-      }
-
-      .download-btn {
-        display: block;
-        margin: 10px auto 0;
-        text-align: center;
-      }
-    }
-  </style>
+  <title>AnimeVerse - Watch Anime Anywhere</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header>
-    <h1>Fox Dojo</h1>
-    <p>Master Martial Arts From Anywhere — 100% Free</p>
+    <h1>🌸 AnimeVerse</h1>
+    <p>Watch. Download. Like. Share. All offline.</p>
   </header>
 
-  <div class="container">
+  <main class="anime-container">
 
-    <div class="video-section">
-      <h2>🥋 Karate Basics</h2>
-      <video controls data-id="video1">
-        <source src="videos/karate_basics.mp4" type="video/mp4">
+    <div class="anime-card" data-id="naruto">
+      <img src="images/naruto.jpg" alt="Naruto">
+      <h2>Naruto</h2>
+      <video controls>
+        <source src="videos/naruto.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <a class="download-btn" href="videos/karate_basics.mp4" download>Download Video</a>
+      <div class="actions">
+        <button class="like-btn">❤️ Like</button>
+        <a href="videos/naruto.mp4" download class="download-btn">⬇️ Download</a>
+        <button onclick="shareAnime('Naruto')">🔗 Share</button>
+      </div>
     </div>
 
-    <div class="video-section">
-      <h2>🥊 Kickboxing Training</h2>
-      <video controls data-id="video2">
-        <source src="videos/kickboxing.mp4" type="video/mp4">
+    <div class="anime-card" data-id="demon">
+      <img src="images/demon_slayer.jpg" alt="Demon Slayer">
+      <h2>Demon Slayer</h2>
+      <video controls>
+        <source src="videos/demon_slayer.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <a class="download-btn" href="videos/kickboxing.mp4" download>Download Video</a>
+      <div class="actions">
+        <button class="like-btn">❤️ Like</button>
+        <a href="videos/demon_slayer.mp4" download class="download-btn">⬇️ Download</a>
+        <button onclick="shareAnime('Demon Slayer')">🔗 Share</button>
+      </div>
     </div>
 
-    <div class="video-section">
-      <h2>🧘‍♂️ Tai Chi for Beginners</h2>
-      <video controls data-id="video3">
-        <source src="videos/taichi.mp4" type="video/mp4">
+    <div class="anime-card" data-id="onepiece">
+      <img src="images/one_piece.jpg" alt="One Piece">
+      <h2>One Piece</h2>
+      <video controls>
+        <source src="videos/one_piece.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <a class="download-btn" href="videos/taichi.mp4" download>Download Video</a>
+      <div class="actions">
+        <button class="like-btn">❤️ Like</button>
+        <a href="videos/one_piece.mp4" download class="download-btn">⬇️ Download</a>
+        <button onclick="shareAnime('One Piece')">🔗 Share</button>
+      </div>
     </div>
 
-    <div class="video-section">
-      <h2>🥷 Ninjutsu Stealth Moves</h2>
-      <video controls data-id="video4">
-        <source src="videos/ninjutsu.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <a class="download-btn" href="videos/ninjutsu.mp4" download>Download Video</a>
-    </div>
-
-    <div class="badge-section" id="badgeSection">
-      <img src="images/fox_badge.png" alt="Fox Dojo Badge" />
-      <h3>🎖️ You’ve Earned the Fox Dojo Badge!</h3>
-      <p>You're on the path of the warrior. Keep training!</p>
-    </div>
-
-  </div>
+  </main>
 
   <footer>
-    &copy; 2025 Fox Dojo — Train Your Spirit, Body, and Mind
+    &copy; 2025 AnimeVerse. Built for fans, by fans.
   </footer>
 
-  <script>
-    const videos = document.querySelectorAll("video");
-    const badgeSection = document.getElementById("badgeSection");
-    let watched = {};
-
-    videos.forEach(video => {
-      const id = video.dataset.id;
-      watched[id] = false;
-
-      video.addEventListener("ended", () => {
-        watched[id] = true;
-        if (Object.values(watched).every(status => status)) {
-          badgeSection.classList.add("badge-earned");
-        }
-      });
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
-  </html>
+</html>
