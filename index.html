@@ -3,78 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Top 7 Greatest AI Apps and Search Engines of 2025</title>
+  <title>Fox Dojo - Learn Martial Arts for Free</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f8f9fa;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
     }
 
     header {
-      background-color: #0d1117;
-      color: white;
-      padding: 20px;
+      background: #111;
+      padding: 20px 0;
       text-align: center;
+      border-bottom: 2px solid red;
     }
 
-    h1 {
+    header h1 {
+      color: #ff3c3c;
+      font-size: 2.5em;
       margin: 0;
-      font-size: 2em;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #ccc;
     }
 
     .container {
-      max-width: 900px;
-      margin: auto;
       padding: 30px;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .ai-section {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
+    .video-section {
+      margin-bottom: 40px;
+      border: 1px solid #333;
       padding: 20px;
-      transition: transform 0.2s ease;
+      border-radius: 10px;
+      background-color: #111;
     }
 
-    .ai-section:hover {
-      transform: translateY(-3px);
+    .video-section h2 {
+      color: #ff3c3c;
+      margin-bottom: 15px;
     }
 
-    .ai-section img {
-      float: right;
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-      margin-left: 15px;
+    video {
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid #444;
     }
 
-    .ai-section h2 {
-      margin-top: 0;
-      font-size: 1.5em;
-      color: #0a58ca;
+    .download-btn {
+      margin-top: 15px;
+      display: inline-block;
+      background-color: #ff3c3c;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
     }
 
-    .ai-section p {
-      line-height: 1.6;
+    .download-btn:hover {
+      background-color: #e60000;
+    }
+
+    .badge-section {
+      text-align: center;
+      margin-top: 60px;
+      transition: all 0.5s ease;
+    }
+
+    .badge-section img {
+      width: 120px;
+      border-radius: 50%;
+      border: 4px solid #ff3c3c;
+      opacity: 0.4;
+      filter: grayscale(100%);
+      transition: all 0.5s ease;
+    }
+
+    .badge-earned img {
+      opacity: 1;
+      filter: none;
+      box-shadow: 0 0 20px #ff3c3c, 0 0 40px red;
+      transform: scale(1.1);
+    }
+
+    .badge-earned h3 {
+      color: #00ff88;
+      animation: glowText 2s infinite alternate;
+    }
+
+    @keyframes glowText {
+      from { text-shadow: 0 0 5px #00ff88; }
+      to   { text-shadow: 0 0 20px #00ff88; }
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #0d1117;
-      color: #aaa;
+      background: #111;
+      color: #777;
       margin-top: 40px;
+      border-top: 2px solid red;
     }
 
     @media (max-width: 600px) {
-      .ai-section img {
-        float: none;
+      .container {
+        padding: 15px;
+      }
+
+      .download-btn {
         display: block;
-        margin: 10px auto;
+        margin: 10px auto 0;
+        text-align: center;
       }
     }
   </style>
@@ -82,59 +129,77 @@
 <body>
 
   <header>
-    <h1>Top 7 Greatest AI Apps and Search Engines in 2025</h1>
-    <p>Explore the smartest tools shaping the future</p>
+    <h1>Fox Dojo</h1>
+    <p>Master Martial Arts From Anywhere — 100% Free</p>
   </header>
 
   <div class="container">
 
-    <div class="ai-section">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT Logo">
-      <h2>1. ChatGPT by OpenAI</h2>
-      <p>ChatGPT continues to lead in 2025 as the most widely-used conversational AI. With features like real-time voice, image understanding, and document processing, it's used for everything from education to business, coding to personal advice. GPT-4.5 and GPT-5 integrations power millions of tasks daily.</p>
+    <div class="video-section">
+      <h2>🥋 Karate Basics</h2>
+      <video controls data-id="video1">
+        <source src="videos/karate_basics.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <a class="download-btn" href="videos/karate_basics.mp4" download>Download Video</a>
     </div>
 
-    <div class="ai-section">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Google_Bard_logo.svg/512px-Google_Bard_logo.svg.png" alt="Gemini/Bard Logo">
-      <h2>2. Google Gemini (formerly Bard)</h2>
-      <p>Google Gemini dominates search-related AI use in 2025. With multimodal input, full integration with Google Workspace, and real-time data access, it’s a powerful tool for students, researchers, and creators alike.</p>
+    <div class="video-section">
+      <h2>🥊 Kickboxing Training</h2>
+      <video controls data-id="video2">
+        <source src="videos/kickboxing.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <a class="download-btn" href="videos/kickboxing.mp4" download>Download Video</a>
     </div>
 
-    <div class="ai-section">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Microsoft_logo_%282012%29.svg/512px-Microsoft_logo_%282012%29.svg.png" alt="Microsoft Copilot Logo">
-      <h2>3. Microsoft Copilot</h2>
-      <p>Copilot is embedded deeply into Windows, Word, Excel, and more. It's revolutionized productivity in 2025, making it easier than ever to summarize reports, generate emails, code software, and even automate workflows with natural language.</p>
+    <div class="video-section">
+      <h2>🧘‍♂️ Tai Chi for Beginners</h2>
+      <video controls data-id="video3">
+        <source src="videos/taichi.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <a class="download-btn" href="videos/taichi.mp4" download>Download Video</a>
     </div>
 
-    <div class="ai-section">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Perplexity_ai_logo.jpeg/640px-Perplexity_ai_logo.jpeg" alt="Perplexity AI Logo">
-      <h2>4. Perplexity AI</h2>
-      <p>Perplexity AI has become the #1 research assistant for 2025. It offers verified, real-time, source-linked answers, making it essential for academic work, journalism, and scientific research. The Pro version integrates GPT-4 and Claude seamlessly.</p>
+    <div class="video-section">
+      <h2>🥷 Ninjutsu Stealth Moves</h2>
+      <video controls data-id="video4">
+        <source src="videos/ninjutsu.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <a class="download-btn" href="videos/ninjutsu.mp4" download>Download Video</a>
     </div>
 
-    <div class="ai-section">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/You.com_logo.png" alt="You.com Logo">
-      <h2>5. You.com</h2>
-      <p>You.com is a privacy-first AI search engine that combines AI answers with traditional search results. It lets users personalize their search, block unwanted sources, and use AI tools directly from the search page — like code generators, image editors, and summarizers.</p>
-    </div>
-
-    <div class="ai-section">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Midjourney_Logo.png/768px-Midjourney_Logo.png" alt="Midjourney Logo">
-      <h2>6. Midjourney</h2>
-      <p>Midjourney remains the leader in AI-generated visual art. In 2025, it offers video, animation, and stylized avatars as well. With Discord-based tools and APIs, it's used by brands, designers, and indie creators worldwide.</p>
-    </div>
-
-    <div class="ai-section">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Claude_Antropic_Logo.svg/512px-Claude_Antropic_Logo.svg.png" alt="Claude Logo">
-      <h2>7. Claude by Anthropic</h2>
-      <p>Claude is known for its reliability, long memory, and thoughtful answers. In 2025, Claude 3 Opus offers high-quality responses, and Claude-powered AI assistants are now used in enterprise teams, customer service, and legal research due to its ethical alignment and safety-first design.</p>
+    <div class="badge-section" id="badgeSection">
+      <img src="images/fox_badge.png" alt="Fox Dojo Badge" />
+      <h3>🎖️ You’ve Earned the Fox Dojo Badge!</h3>
+      <p>You're on the path of the warrior. Keep training!</p>
     </div>
 
   </div>
 
   <footer>
-    &copy; 2025 AI Review Central — Designed for future insight.
+    &copy; 2025 Fox Dojo — Train Your Spirit, Body, and Mind
   </footer>
 
+  <script>
+    const videos = document.querySelectorAll("video");
+    const badgeSection = document.getElementById("badgeSection");
+    let watched = {};
+
+    videos.forEach(video => {
+      const id = video.dataset.id;
+      watched[id] = false;
+
+      video.addEventListener("ended", () => {
+        watched[id] = true;
+        if (Object.values(watched).every(status => status)) {
+          badgeSection.classList.add("badge-earned");
+        }
+      });
+    });
+  </script>
+
 </body>
-</html>
+  </html>
