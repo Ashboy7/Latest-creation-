@@ -31,6 +31,52 @@ return ( <div className="p-4 max-w-5xl mx-auto"> <h1 className="text-3xl font-bo
         <CardContent className="space-y-4 p-4">
           <Input placeholder="Describe an image..." value={input} onChange={(e) => setInput(e.target.value)} />
           <Button onClick={() => handleAIResponse("generate-image")}>Generate Image</Button>
-          {output && <img src={output} alt="AI generated" className="rounded mt-
+          {output && <img src={output} alt="AI generated" className="rounded mt-2" />}
+        </CardContent>
+      </Card>
+    </TabsContent>
 
-            
+    <TabsContent value="voice">
+      <Card>
+        <CardContent className="space-y-4 p-4">
+          <Button onClick={() => handleAIResponse("voice")}>Record & Ask</Button>
+          <div className="bg-gray-100 p-2 rounded">{output}</div>
+        </CardContent>
+      </Card>
+    </TabsContent>
+
+    <TabsContent value="logic">
+      <Card>
+        <CardContent className="space-y-4 p-4">
+          <Textarea placeholder="Enter logic or math question..." value={input} onChange={(e) => setInput(e.target.value)} />
+          <Button onClick={() => handleAIResponse("logic")}>Solve</Button>
+          <div className="mt-2 bg-gray-100 p-2 rounded">{output}</div>
+        </CardContent>
+      </Card>
+    </TabsContent>
+
+    <TabsContent value="doc">
+      <Card>
+        <CardContent className="space-y-4 p-4">
+          <Textarea placeholder="Create or summarize a document..." value={input} onChange={(e) => setInput(e.target.value)} />
+          <Button onClick={() => handleAIResponse("summarize")}>Summarize</Button>
+          <div className="mt-2 bg-gray-100 p-2 rounded">{output}</div>
+        </CardContent>
+      </Card>
+    </TabsContent>
+
+    <TabsContent value="translate">
+      <Card>
+        <CardContent className="space-y-4 p-4">
+          <Input placeholder="Enter text to translate..." value={input} onChange={(e) => setInput(e.target.value)} />
+          <Button onClick={() => handleAIResponse("translate")}>Translate</Button>
+          <div className="mt-2 bg-gray-100 p-2 rounded">{output}</div>
+        </CardContent>
+      </Card>
+    </TabsContent>
+  </Tabs>
+</div>
+
+); }
+
+    
