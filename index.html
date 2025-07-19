@@ -1,70 +1,36 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AnimeVerse - Global Anime Browser</title>
-  <link rel="stylesheet" href="style.css" />
-  <script type="module">
-    // Firebase SDKs
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-    import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
+// Fox AI - Full Website Code with Advanced Features import React, { useState } from "react"; import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button"; import { Input } from "@/components/ui/input"; import { Textarea } from "@/components/ui/textarea"; import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"; import { Mic, ImageIcon, Globe, Bot, FileText } from "lucide-react";
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth();
-const db = getFirestore();
+export default function FoxAIApp() { const [input, setInput] = useState(""); const [output, setOutput] = useState("");
 
-// Auth handlers
-const loginForm = document.getElementById('login-form');
-const logoutBtn = document.getElementById('logout');
-const userInfo = document.getElementById('user-info');
+const handleAIResponse = async (endpoint) => { const res = await fetch(https://your-backend.com/${endpoint}, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ prompt: input }), }); const data = await res.json(); setOutput(data.response || data.image || JSON.stringify(data)); };
 
-loginForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const email = loginForm.email.value;
-  const password = loginForm.password.value;
-  try {
-    await signInWithEmailAndPassword(auth, email, password);
-  } catch (err) {
-    alert("Login failed. Trying to create account.");
-    await createUserWithEmailAndPassword(auth, email, password);
-  }
-});
+return ( <div className="p-4 max-w-5xl mx-auto"> <h1 className="text-3xl font-bold mb-4">🦊 Fox AI - Your Smart Assistant</h1>
 
-logoutBtn.addEventListener('click', async () => {
-  await signOut(auth);
-});
+<Tabs defaultValue="chat">
+    <TabsList className="grid grid-cols-6 gap-1 mb-4">
+      <TabsTrigger value="chat"><Bot className="inline mr-1" /> Chat</TabsTrigger>
+      <TabsTrigger value="image"><ImageIcon className="inline mr-1" /> Image</TabsTrigger>
+      <TabsTrigger value="voice"><Mic className="inline mr-1" /> Voice</TabsTrigger>
+      <TabsTrigger value="logic"><Globe className="inline mr-1" /> Logic</TabsTrigger>
+      <TabsTrigger value="doc"><FileText className="inline mr-1" /> Documents</TabsTrigger>
+      <TabsTrigger value="translate">🌐 Translate</TabsTrigger>
+    </TabsList>
 
-onAuthStateChanged(auth, async (user) => {
-  if (user) {
-    userInfo.innerText = `Logged in as: ${user.email}`;
-    document.body.classList.add("logged-in");
+    <TabsContent value="chat">
+      <Card>
+        <CardContent className="space-y-4 p-4">
+          <Textarea placeholder="Ask something..." value={input} onChange={(e) => setInput(e.target.value)} />
+          <Button onClick={() => handleAIResponse("chat")}>Send to Fox AI</Button>
+          <div className="mt-2 bg-gray-100 p-2 rounded">{output}</div>
+        </CardContent>
+      </Card>
+    </TabsContent>
 
-    // Load favorites
-    const favDoc = await getDoc(doc(db, "favorites", user.uid));
-    if (favDoc.exists()) {
-      for (const id of favDoc.data().items) {
-        const btn = document.querySelector(`[data-id='${id}'] .like-btn`);
-        if (btn) {
-          btn.textContent = '❤️ Liked';
-          btn.style.background = '#28a745';
-        }
-      }
-    }
-  } else {
-    userInfo.innerText = "Not logged in";
-    document.body.classList.remove("logged-in");
-  }
-});
+    <TabsContent value="image">
+      <Card>
+        <CardContent className="space-y-4 p-4">
+          <Input placeholder="Describe an image..." value={input} onChange={(e) => setInput(e.target.value)} />
+          <Button onClick={() => handleAIResponse("generate-image")}>Generate Image</Button>
+          {output && <img src={output} alt="AI generated" className="rounded mt-
 
-// Save favorite anime
-document.addEventListener('click', async (e) =>
-
-    
+            
